@@ -1,0 +1,34 @@
+# Root level ignores
+.env
+.env.local
+.env*.local
+
+# Dependencies
+**/node_modules
+
+# Build outputs
+**/build
+**/dist
+**/out
+
+# Frontend specific
+frontend/.next
+frontend/.env
+frontend/.env.local
+frontend/out
+frontend/build
+
+# Cache & logs
+**/.cache
+**/cache
+*.log
+.DS_Store
+
+# Optional: IDE files
+.vscode/
+.idea/
+
+# Foundry specific (you can also keep these in contracts/.gitignore)
+contracts/cache/
+contracts/out/
+contracts/broadcast/
