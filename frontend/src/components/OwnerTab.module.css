@@ -1,0 +1,40 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-top: 24px;
+}
+
+@media (max-width: 580px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.layout > hr {
+  grid-column: 1 / -1;
+}
+
+.notice {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-top: 24px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* Push button to bottom of card */
+.cardTitle ~ button,
+.cardTitle ~ div ~ button,
+.cardTitle ~ div ~ div ~ button {
+  margin-top: 12px;
+}

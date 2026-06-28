@@ -1,0 +1,123 @@
+/* ── Status Card ───────────────────────────────────────────────────── */
+.card {
+  background: #fff8f8;
+  border: 1px solid #f2e0e0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(224, 49, 49, 0.06);
+}
+
+/* Bookmark ribbon */
+.bookmark {
+  position: absolute;
+  top: 0;
+  right: 28px;
+  width: 28px;
+  height: 40px;
+  background: #e03131;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+}
+
+/* Left panel */
+.left {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 130px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(224, 49, 49, 0.08);
+}
+
+.iconCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.daysNum {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: 'JetBrains Mono', monospace;
+  transition: color 0.3s;
+}
+
+.daysLbl {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Right panel */
+.right {
+  flex: 1;
+  min-width: 0;
+}
+
+.statusWord {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+  transition: color 0.3s;
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+.subHighlight {
+  color: #e03131;
+  font-weight: 600;
+}
+
+/* Stats row */
+.statsRow {
+  display: flex;
+  border-top: 1px solid #edd;
+}
+
+.stat {
+  flex: 1;
+  padding: 14px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statDivider {
+  border-left: 1px solid #edd;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.statValue {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .card { flex-direction: column; align-items: stretch; }
+  .left { flex-direction: row; justify-content: center; min-width: unset; }
+  .statusWord { font-size: 28px; }
+}
